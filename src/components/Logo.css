@@ -1,0 +1,42 @@
+.custom-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #1a5f3f, #2d8659);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(26, 95, 63, 0.2);
+}
+
+.arrow-up {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.capital {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+.growth {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a5f3f;
+  letter-spacing: 2px;
+}
