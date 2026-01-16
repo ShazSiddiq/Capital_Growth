@@ -9,7 +9,10 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Stats from './components/Stats';
+import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
+import ParticleBackground from './components/ParticleBackground';
 
 export default function App() {
   useEffect(() => {
@@ -24,11 +27,14 @@ export default function App() {
 
   return (
     <>
+      <ParticleBackground />
       <Navbar />
       <Hero />
       <Services />
       <Stats />
+      <Testimonials />
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

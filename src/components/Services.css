@@ -2,6 +2,24 @@
   padding: 6rem 0;
   background: linear-gradient(180deg, #f8f9fa 0%, white 100%);
   position: relative;
+  overflow: hidden;
+}
+
+.services-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.service-particle {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.15;
+  color: #1a5f3f;
 }
 
 .section-header {
@@ -64,6 +82,28 @@
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(26, 95, 63, 0.05), transparent);
   transition: left 0.5s;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(26, 95, 63, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.service-card:hover::after {
+  opacity: 1;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .service-card:hover::before {

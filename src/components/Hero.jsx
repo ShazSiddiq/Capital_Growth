@@ -11,8 +11,32 @@ export default function Hero() {
     window.open(`https://wa.me/918750039084?text=${message}`, '_blank');
   };
 
+  const floatingIcons = ['₹', '$', '💰', '💵', '💳', '📈', '₹', '$', '💰'];
+
   return (
     <section className="hero" id="home">
+      <div className="floating-money">
+        {floatingIcons.map((icon, index) => (
+          <motion.div
+            key={index}
+            className="money-icon"
+            initial={{ y: -100, x: Math.random() * window.innerWidth, opacity: 0 }}
+            animate={{ 
+              y: window.innerHeight + 100,
+              opacity: [0, 1, 1, 0],
+              rotate: 360
+            }}
+            transition={{
+              duration: 8 + Math.random() * 4,
+              repeat: Infinity,
+              delay: index * 0.8,
+              ease: "linear"
+            }}
+          >
+            {icon}
+          </motion.div>
+        ))}
+      </div>
       <div className="hero-container">
         <motion.div 
           className="hero-content"
@@ -81,7 +105,7 @@ export default function Hero() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Apply Now
+              <i className="fab fa-whatsapp"></i> Connect via WhatsApp
             </motion.button>
           </form>
         </motion.div>
